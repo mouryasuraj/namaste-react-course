@@ -6,6 +6,7 @@
         It has two values
             a. anonymous
             b. use-credentials
-    3.
+    3.What is async and defer?
+    ---> 
 
 */
