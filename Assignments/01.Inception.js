@@ -17,7 +17,7 @@
 --> CDN stands for Content Delivery Network. 
     It is used to deliver the content like files(js, css) and any other service you need just put the CDN of it and start using it.
     With the help of CDN we can create out application fast and in a efficient way.
-    We use this because it is very fast and it improves the website performance and many more like security, bandwidth saving
+    We use this because it is very fast and it improves the website performance and many more like security, bandwidth saving.
 
 
 4. Why is 'React' known as 'React'

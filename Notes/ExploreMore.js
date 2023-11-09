@@ -7,6 +7,10 @@
             a. anonymous
             b. use-credentials
     3.What is async and defer?
-    ---> 
+    4. What is npm?
+    5. What is dependencies?
+    6. What is parcel.js?
+    7. What caret and tilde symbol in package.json file ---> https://www.geeksforgeeks.org/difference-between-tilde-and-caret-in-package-json/
+    8. Difference between package.json and package-lock.json
 
 */
