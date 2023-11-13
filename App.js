@@ -1,4 +1,7 @@
+import React from "react";
+import  ReactDOM  from "react-dom/client";
 const rootDOM = ReactDOM.createRoot(document.getElementById('root'));
+
 // HOw to create element
 // const h1 = React.createElement(
 //     'h2',
@@ -42,7 +45,7 @@ const parent = React.createElement('div',{ id: 'parent' },
     [
         React.createElement('div', { id: 'child1' },
         [
-            React.createElement('h1', {}, "hi, I'm h1 tag"),
+            React.createElement('h1', {}, "hi, I'm h1 tag 😌"),
             React.createElement('h2', {}, "hi, I'm h2 tag"),
         ]),
         React.createElement('div', { id: 'child2' },

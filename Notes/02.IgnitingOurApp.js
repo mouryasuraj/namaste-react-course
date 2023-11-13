@@ -5,7 +5,7 @@
 
 // NPM-->1.Npm is everything but not a Node package manager.
 //       2.NPM doesn't have full form   ----> https://www.npmjs.com/
-//       3.NPM is manage packages.
+//       3.NPM manage packages.
 //       4.NPM is a standard repository for all the packages.
 //       5.All the packages are hosted in NPM
 
@@ -28,4 +28,38 @@
 ---> It contains all the code of dependencies
     There are lot of other folder are there. Because parcel have its own dependencies and these dependencies have their own dependencies. It is called as transitive dependencies.
 4.If i have my package.json and package-lock.json then I can regenerate my node_module folder by using command 'npm install or npm i'
+
+5. What npx parcel index.html does behind the scene?
+--->npx means executing a package
+--->npx parcel index.html -----> Node execute the bundler parcel and build the code and hosted on localhost:1234
+
+
+
+--What parcel is doing for you?---- https://parceljs.org/features/development
+1.Dev build
+2.local server
+3.HMR---> Hot Module Relacement
+4.File Watching Algorithm---->Written in c++
+5.parcel also caching thing for you--- faster build because of caching
+6.image optimization
+7.Miniifcation of file
+8.Bundling
+9.compress the file
+10.consistent hashing
+11.code splitting
+12.Differential Bundling ---- support older browsers
+13.Diagnostice
+14.Good error handling
+15.https
+16.Tree shaking --- remove unused code
+17.Different dev and production bundles
+
+
+browserlist----->https://github.com/browserslist/browserslist#query-composition
 */
+
+
+
+// Progress of leacture
+// Inception - Completed
+// Igniting our app - Completed

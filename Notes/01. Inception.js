@@ -2,7 +2,7 @@
 
 /*
 
-1st way to use react -- Using CDN react
+1st way to use react -- Using CDN react(using CDN is not the preferred way to bring react and reactDOM into our project)
     Put the below code inside body tag at the end
             <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
             <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -29,8 +29,6 @@ Library or framework
 */
 
 
-// Progress of leacture
-// Inception - Completed
 
 
 
