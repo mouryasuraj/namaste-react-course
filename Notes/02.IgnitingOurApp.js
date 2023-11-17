@@ -59,7 +59,3 @@ browserlist----->https://github.com/browserslist/browserslist#query-composition
 */
 
 
-
-// Progress of leacture
-// Inception - Completed
-// Igniting our app - Completed
