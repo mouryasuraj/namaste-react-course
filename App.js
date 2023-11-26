@@ -56,7 +56,7 @@ const parent = React.createElement('div',{ id: 'parent' },
         
     ]
 )
-// Above code look difficult to understand if we have lots of elements. Here JSX, Comes into picture where we can write html element in the javascript just like we write html tags
+// Above code look difficult to understand if we have lots of elements. Here JSX Comes into picture where we can write html like element in the javascript just like we write html tags
 
 
 rootDOM.render(parent)

@@ -16,7 +16,7 @@
 3.What is CDN? Why we use it?
 --> CDN stands for Content Delivery Network. 
     It is used to deliver the content like files(js, css) and any other service you need just put the CDN of it and start using it.
-    With the help of CDN we can create out application fast and in a efficient way.
+    With the help of CDN we can create our application fast and in a efficient way.
     We use this because it is very fast and it improves the website performance and many more like security, bandwidth saving.
 
 

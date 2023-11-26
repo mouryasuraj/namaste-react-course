@@ -1,7 +1,7 @@
 /*
 
 1.What is npm?
--->1. NPM or "Node Package manager" or "No Pee Mee". There is no abbreviation for npm for if you search on google 
+-->1. NPM or "Node Package manager" or "No Pee Mee". There is no abbreviation for npm  if you search on google 
       "What is the  fullorm of npm"--> it will show "Node Package Manager".
    2. NPM is a package manager.
    3. NPM contains two parts
@@ -28,7 +28,7 @@
 
 
 3.What is .parcel-cache?
---->1. Parcel is a directory created by parcel
+--->1. .parcel-cache is a directory created by parcel
     2. It is used to build the app faster because it stores previously processed files and dependencies. Parcel can avoid reduntant work during subsequent builds. This significantly improves build performance, especially in scenarious where the codebase remains relatively stable.
     2. And it will store files in .parcel-cache folder.
     3. It can be regenerated using "npm parcel" command.
@@ -118,7 +118,7 @@
             1.Package-lock.json ensure that everyone working on the project installed the exact same version of dependencies. If you modify it, you might introduce inconsistencies leading to different version being installed on different machines.
     Reproducibilty:
             1.It help make your project more reproducible.Other developer and development environment can create same dependencies setup, ensuring a consistent and predictable behaviour, which is crucial for collaboration and deployemnt
-            2.Npm and yarn are designed to managae and update package-lock.json changes on package.json.
+            2.Npm and yarn are designed to manage and update package-lock.json changes on package.json.
         
 12.What is node_moudules? Is it good idea to push it on git?
 ---> 1.node_modules is a directory create by Node.js or NPM to store the dependencies that your project relies on. When you run 'npm install' command, npm install theses dependencies in the node_modules directory.
@@ -135,8 +135,8 @@
 
 15.What is caret(^) and tilda(~);
 ---> caret(^):
-        1.It is a symbole used before where we write version
-        2.It means that whenever a minor update is happen in a package or dependencies it will update it
+        1.It is a symbol used before where we write version's
+        2.It means that whenever a minor update is happen in a package or dependencies it will update it automatically.
     Tilda(~):
         1.It is same as caret but it update the major update.
 */
