@@ -46,14 +46,14 @@
     3.Purpose of devDependencies :->1.devDependencies are packages that are only needed during development and testing.
                                   2.They are not required for the application to run in a production environment.  
     4.Command: npm install --production.  This command to used to install only normal dependencies for production
-               npm install . This command to used to install both dependencies and devdependencies.
+               npm install . This command is used to install both dependencies and devdependencies.
                
 6.What is Tree Shaking?
 --->1. Tree shaking is a technique used in the context of JavaScript module bundlers like parcel, webpack or rollup to eliminate
         dead(unsed or unreachale) code from the final bundled code. The term 'tree shaking' originates from the concept of shaking a tree and causing the dead leaves to fall off while keeping the live ones. 
     2.Here how tree shaking works:
         1.Tree structure: 
-                a.In modern javascript application, code is ofter organized in modules, which are files containing functions, classes or vairables. These modules form a dependency tree where each module depend on other modules.
+                a.In modern javascript application, code is often organized in modules, which are files containing functions, classes or vairables. These modules form a dependency tree where each module depend on other modules.
         2.Import and export statements:
                 a.Modules use import and export statement to declare dependencies.
                 b.An import statement brings in functionality from another module, and an export statement makes certain functionality available to other modules.
@@ -92,7 +92,7 @@
 --->1.The .gitignore file is a configuration file used by git to specify files and directories that should be ignore when tracking
     changes in a git repository.
     2.It allow you to exclude certain file or pattern from being included in a version control system.
-    3.The .gitignore file is used to prevent sensitive or unncessary files from beign committed to the repository
+    3.The .gitignore file is used to prevent sensitive or unncessary files from being committed to the repository
 
     what we can add to it---> Those packages or dependencies we can regenerate that we can add to .gitignore file
                               sensitive information add to .gitignore file

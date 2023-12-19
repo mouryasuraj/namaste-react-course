@@ -48,4 +48,39 @@
         It loads script asynchronously while the html is parsing and execute after html parsing is completed.
         Its guaranteed that script load after the html will parse. unlike async
 
+8.What is CORS(Cross Origin Resource Sharing)
+---> It is a feature which is used by web browser to control how web pages in one domain interact with resources such as (APIs and data) hosted on other domain.
+
+
+- What is CORS?
+--->
+CORS stands for Cross-Origin Resource Sharing. It is a security feature implemented by web browsers to control how web pages in one domain can request and interact with resources (such as data or APIs) hosted on another domain. This security measure is in place to prevent potentially malicious cross-origin requests.
+
+
+- What is Cross Origin?
+--->Cross-origin refers to interactions or requests that occur between different origins on the web. An origin is defined by the combination of the scheme (e.g., http or https), domain (e.g., example.com), and port (if specified) of a web page. If two resources (such as web pages, scripts, or APIs) have the same origin, they are said to be of the same origin. If any of these components differ between resources, they are considered to be from different origins.
+
+
+- Are subdomain, host, port, protocol fall under Cross-Origin mechanism?
+---->Yes, subdomain, host, port, and protocol are all components that contribute to determining the origin of a resource, and they play a crucial role in the Cross-Origin mechanism.
+
+
+- How does Cross Origin Request Sharing works behind the scenes?
+- What is CORS preflight?
+--->
+CORS preflight is an additional step in the Cross-Origin Resource Sharing (CORS) mechanism that involves sending an HTTP OPTIONS request to the server before making the actual cross-origin request. The purpose of the preflight request is to determine whether the actual request (e.g., a GET, POST, or other HTTP method) from the web page's origin is allowed by the server.
+
+
+- What is the OPTIONS call?
+- What are the additional HTTP Headers required?
+- Does server always make Preflight options call in CORS protocol?
+----> Acces control allow origin, Acces control allow method, Acces control allow origin headers, Acces control allow credentials, Acces control expose headers, Acces control max age.
+
+
+
+- What browser versions support CORS?
+- Access Control Allow Origin Error?
+- How to solve CORS Error?
+- How to resolve CORS issue in Google Chrome?
+
 */

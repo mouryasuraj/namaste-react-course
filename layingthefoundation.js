@@ -1,9 +1,9 @@
 import React from "react";
-import ReactDOM, { render } from "react-dom";
+import ReactDOM from "react-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-/*
+
 
 // React.createElement()===> React.createElement creates an object when we render this object into the html then it will be an html element.
 
@@ -26,14 +26,14 @@ console.log(heading);
 const jsxHeading = <h1 id="heading">JSX heading 👌</h1> //This is JSX. This is not a pure javascript. Javascript not understand this.It only understand ecamascript (es6 the latest version).This in not a valid pure javscript. Because js engine or browsers can't read this code.Copy this code and past it into the browser it will throw an Syntaxerror. But this code is working here because of parcel. Parcel is responsible for this. It is transpiled by babel (which is managed by parcel) before it going to the js engine. And then receive the code which can understand js engine.
 console.log(jsxHeading);  //It is an react element which is an object
 root.render(jsxHeading);  //it will convert our object into html element
-*/
+
 
 
 
 
 
 // ----------------React component----------------
-/*
+
 
 // React element
 // const heading = (
@@ -64,7 +64,7 @@ const HeadingComponent = () => {
 
 root.render(<HeadingComponent />) //This is proper way to render component. It will understand by babel
 
-*/
+
 
 
 
@@ -73,16 +73,16 @@ root.render(<HeadingComponent />) //This is proper way to render component. It w
 // ---------Practice component---------------
 
 // Component using normal function
-const Title = function(){
-    return(
-        <h1>Title</h1>
-    )
-}
+// const Title = function(){
+//     return(
+//         <h1>Title</h1>
+//     )
+// }
 
 
 // suppose we want to render element into component
 const button = (
-        <button type="button">Hello</button>
+    <button type="button">Hello</button>
 )
 
 const name = 'suraj'
