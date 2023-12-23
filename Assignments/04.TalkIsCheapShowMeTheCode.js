@@ -48,4 +48,82 @@
                 a.One react determines the changes needed, it update the actual DOM with only the necessary modifications
                 b.This selective update process is more efficient than directly updating the actual DOM or manipulating the entire DOM tree.
 
+
+6.What is reconciliation in React?
+--> 1.In React, reconciliation refers to the process of updating the UI to reflect the most recent application state.
+    2.When the state of React component changes, React follows a process called "Reconcilication" to efficiently update the DOM and keep it in sync with the virtual DOM.
+    3.The virtual DOM is an memory representation of the actual DOM. When there is a change in the state or props of a component, React doesn't immediately update the actual DOM. Instead, it first update the virutal DOM, which is the lightweight copy of actual DOM. Then it performs a process called reconciliation to determine the most efficient way to update the real DOM.
+    4.React uses diffing algorithm during reconciliation to identify the differences between the previous virtual DOM and the new Virtual DOM.
+    5.Here are the key steps in the reconciliation process:
+            a.Virtual DOM Comparison
+            b.Reconciliation Algorithm
+            c.Minimal Updates
+            d.Real DOM updates
+
+7.What is React fibre?
+---> 
+    1.Traditional Rendering Process in React (Pre-Fiber):
+        a.Render and Reconciliation:
+            1.When a component's state or props change, React initiates a process called reconciliation.
+            Reconciliation involves comparing the new virtual DOM with the previous one to determine the differences.
+            
+        b.Synchronous Rendering:
+            The reconciliation process was synchronous and often occurred in a single pass.
+            Large updates could block the main thread, leading to performance issues, especially in complex applications.
+
+        c.Introduction of React Fiber:
+            React Fiber is a reimplementation of the core algorithm that drives React's rendering process. Its main goals are to make rendering more efficient, allow for better handling of asynchronous tasks, and enhance the overall performance of React applications.
+
+        d.Key Concepts of React Fiber:
+            1.Fibers:
+                In React Fiber, the work is broken down into smaller units called "fibers."
+                Fibers represent individual units of work that can be prioritized and processed incrementally.
+            2.Incremental Rendering:
+                React Fiber allows rendering work to be performed in smaller chunks, making it more interruptible.
+                It can pause and resume work, enabling better responsiveness, especially in scenarios with frequent updates.
+            3.Prioritization:
+                Rendering work can be prioritized based on its urgency.
+                High-priority work, such as user interactions, can be processed quickly, improving the perceived performance.
+            4.Asynchronous Rendering:
+                React Fiber introduces the concept of asynchronous rendering.
+                Rendering work can be spread out over multiple animation frames, preventing jank and improving overall performance.
+
+        e.Example Scenario:
+            Consider a scenario where a user interacts with a button, triggering a state change in a React component. With React Fiber:
+
+Prioritization:
+
+The button click event is a high-priority update.
+React Fiber ensures that this update is processed quickly, providing a more responsive user experience.
+Incremental Rendering:
+
+Rendering work related to the button click is broken down into smaller units (fibers).
+These units can be processed incrementally, preventing long blocking times on the main thread.
+Error Boundaries:
+React Fiber also introduces the concept of error boundaries, allowing components to catch and handle errors gracefully without crashing the entire application.
+
+Summary:
+React Fiber is an internal implementation detail of React that enhances the rendering process by introducing concepts like fibers, incremental rendering, prioritization, and asynchronous rendering. While most React developers don't need to interact directly with Fiber, they benefit from the improved performance and responsiveness it provides, especially in complex and dynamic applications.
+           
+
+8.Can we use index as a key in React?
+-->1. No. It is not recommoned by React to use index as a key. Instead you can use database id, etc.
+   2. Beacause, if we use index as a key. Suppose a new child element render in the first place then index number of this element is 0 and it will shift the index to rest of the element then it may cause and crash your application or render wrong information.
+   3. If you don't use key then browser never know which is the latest element and which is previous one.
+   4.Always use unique id for key if you don't know a unique id then only you can use index as a key.
+
+9.What is props in React? Ways to
+---> 1. In React, props also called as properties.
+     2. It is a mechanism to pass data from parent component to child component.
+     3.Props allow you to make react component dynamic and reusable by passing values as  attributes from one component to another.
+     4.Ways to pass props in React:
+            a.Directly pass to the component during rendering.
+            b.Passing dynamic value like variable and expressions.
+            c.Passing Multiple props.
+            d.Default props.
+            e.Destructuring Props.
+
+10.Waht is config driven UI?
+---> Config-driven UI, or Configuration-driven User Interface, refers to an approach in software development where the appearance and behavior of a user interface are primarily defined by configuration rather than hard-coded implementation. In other words, instead of writing code to describe how a user interface should look and behave, developers use configuration files or data to specify those details.
+
 */
