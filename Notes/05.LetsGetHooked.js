@@ -4,7 +4,7 @@
 // We can use .js or .jsx. It hardly matters. Use whatever you want.
 // Whenever we make component always export it before importing.
 // If you don't put extension at the time of importing then it's fine. Use if you want.
-// Never keep hardcode data in component. Always create separate folder for it and keep these type of hardcode data into that   folder.
+// Never keep hardcode data in component. Always create separate folder for it and keep those type of hardcode data into that folder.
 // ----> 1.Create a folder and name it to Utils and under this folder create a file "constant.js". All the hardcoded things comes into this file.
 // Export and Import
 /*
@@ -17,7 +17,7 @@
     3.Named export is used when you have to export multiple things from  file
     4.default export is used when you have to export only one things from file
     5. In one file, I can only have one default export and have multiple named export
-    6. If you have default export then use directly to export it   ex: import RestaurantCard from './component/Restaurant'
+    6. If you have default export then use directly to import it   ex: import RestaurantCard from './component/Restaurant'
     7. But if you have named export then use curly braces to import   ex: import {LOGOURL, CDNURL} from './constants'
 */
 
@@ -40,7 +40,7 @@
                 a.First import useState from react
                 b.create state variable like:
                     const [state, setState] = useState([]);
-                c.Like we give initial value to normal variable, then same with state variable, we have to give initial value. and this value become the default value of that variable(state)
+                c.Like we give initial value to normal variable, so same with state variable, we have to give initial value. and this value become the default value of that variable(state)
                 d.If we want to update or modify the data then we have to use setState function.
                 e.What is render?
                 --> Whenever a state variable update, react re-render the components.
