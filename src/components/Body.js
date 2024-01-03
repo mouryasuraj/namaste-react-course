@@ -1,12 +1,13 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../Utils/mockData";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 
 
 const Body = () => {
 
     // Local State Variable--> Supowerful state variables
-    const [listOfRestaurant, setListOfRestaurant] = useState(resList); //we have to give initial value and whatever we give or pass value as an argument it become the default value of that variable
+    const [listOfRestaurant, setListOfRestaurant] = useState([]); //we have to give initial value and whatever we give or pass value as an argument it become the default value of that variable
     // We can also write like this
     // const arr = useState(resList);
     // const [listOfRestaurant, setListOfRestaurant] = arr;
@@ -25,12 +26,12 @@ const Body = () => {
     }
 
 
-    // // useEffect
-    // useEffect(()=>{
-    //     fetchData();
-    // },[])
+    // useEffect
+    useEffect(()=>{
+        fetchData();
+    },[])
 
-    // // FetchData function
+    // FetchData function for an api
     // const fetchData = async () =>{
     //     const fetched = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=19.0544695&lng=72.9364825"); //This api is not working.
     //     const jsonData = await fetched.json();
@@ -39,7 +40,16 @@ const Body = () => {
     // }
 
 
-
+    // fetchData function to who hardcode data in the UI
+    const fetchData = ()=>{
+        setTimeout(() => {
+            setListOfRestaurant(resList)
+        }, 1000);
+    }
+    // If the length of restaurant is 0 then show shimmer instead of restaurant cards
+    if(listOfRestaurant.length === 0){
+        return <Shimmer />
+    }
 
     return (
         <div className="body">
@@ -56,6 +66,7 @@ const Body = () => {
                 }
             </div>
         </div>
+        
     )
 }
 
