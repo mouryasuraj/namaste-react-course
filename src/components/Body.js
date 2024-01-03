@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../Utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const Body = () => {
@@ -23,6 +23,22 @@ const Body = () => {
         const filteredRes = resList.filter(res => res.info.avgRating > 4.3)
         setListOfRestaurant(filteredRes)
     }
+
+
+    // // useEffect
+    // useEffect(()=>{
+    //     fetchData();
+    // },[])
+
+    // // FetchData function
+    // const fetchData = async () =>{
+    //     const fetched = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=19.0544695&lng=72.9364825"); //This api is not working.
+    //     const jsonData = await fetched.json();
+    //     console.log(jsonData);
+    //     // setListOfRestaurant(jsonData?.data?.card) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
+    // }
+
+
 
 
     return (
