@@ -14,22 +14,26 @@ const Body = () => {
     // const listOfRestaurant = arr[0];
     // const setListOfRestaurant = arr[1];
 
+    const [filteredRes, setFilteredRes] = useState([]);
+
+    // state varaible for search bar
+    const [searchText, setSearchText] = useState('')
 
 
     // local normal variable
     // const listOfRestaurant = [];
 
     // Top rated
-    const handleTopRated = ()=>{
-        const filteredRes = resList.filter(res => res.info.avgRating > 4.3)
-        setListOfRestaurant(filteredRes)
+    const handleTopRated = () => {
+        const filteredRes = listOfRestaurant.filter(res => res.info.avgRating > 4.3)
+        setFilteredRes(filteredRes)
     }
 
 
     // useEffect
-    useEffect(()=>{
+    useEffect(() => {
         fetchData();
-    },[])
+    }, [])
 
     // FetchData function for an api
     // const fetchData = async () =>{
@@ -41,13 +45,28 @@ const Body = () => {
 
 
     // fetchData function to who hardcode data in the UI
-    const fetchData = ()=>{
+    const fetchData = () => {
         setTimeout(() => {
             setListOfRestaurant(resList)
+            setFilteredRes(resList)
         }, 1000);
     }
+    
+    
+    // Handle Input 
+    const handleInput = (e) => {
+        setSearchText(e.target.value)
+    }
+    // Handle Search BTN
+    const handleSearchBtn = (e) => {
+        e.preventDefault()
+        const filteredRes = listOfRestaurant.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()))
+        setFilteredRes(filteredRes)
+    }
+
+
     // If the length of restaurant is 0 then show shimmer instead of restaurant cards
-    if(listOfRestaurant.length === 0){
+    if (listOfRestaurant.length === 0) {
         return <Shimmer />
     }
 
@@ -55,18 +74,24 @@ const Body = () => {
         <div className="body">
             {/* Search Bar */}
             <div className="search">
-                <button onClick={handleTopRated}>Top Rated Restaurant</button>
+                <button className="top-rating-res" onClick={handleTopRated}>Top Rated Restaurant</button>
+                <form onSubmit={handleSearchBtn} className="search-bar">
+                    <input type="text" placeholder="Search fro restaurant...." value={searchText} onChange={handleInput} />
+                    <button className="search-btn">Search</button>
+                </form>
             </div>
             {/* Restuarant Title */}
             <h1 className="res-title">Restaurants</h1>
             {/* Restaurant Container */}
             <div className="restaurant-container">
                 {
-                    listOfRestaurant.map((resTaurantCard) => <RestaurantCard key={resTaurantCard.info.id} resData={resTaurantCard} />)
+                    filteredRes.length === 0 
+                    ? <h1>No results found.</h1> 
+                    : filteredRes.length === 0 ? <h1 className="no-results-found">No result found.</h1> : filteredRes.map((resTaurantCard) => <RestaurantCard key={resTaurantCard.info.id} resData={resTaurantCard} />)
                 }
             </div>
         </div>
-        
+
     )
 }
 

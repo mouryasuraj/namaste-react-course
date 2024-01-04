@@ -19,7 +19,12 @@
     width: 90px;
     border-radius: 50%;
 }
-
+.nav-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
 .nav-items > ul{
     display: flex;
     align-items: center;
@@ -29,8 +34,9 @@
 }
 .nav-items > ul > li{
     cursor: pointer;
-    color: rgb(9, 33, 45);
+    color: rgb(55, 135, 175);
     font-size: 20px;
+    font-weight: 500;
 }
 .nav-items > ul > li:hover{
     opacity: 0.8;
@@ -110,7 +116,7 @@
     font-size: 35px;
     color: rgb(84, 84, 153);
 }
-.search button{
+.search .top-rating-res{
     padding: 8px;
     cursor: pointer;
     outline: none;
@@ -118,7 +124,7 @@
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
     font-size: 17px;
 }
-.search button:hover{
+.search .top-rating-res:hover{
     background-color: rgb(198, 196, 196);
 }
 
@@ -180,4 +186,74 @@
     margin: 30px auto;
     background-color: rgb(230, 230, 230);
     border-radius: 2px;
+}
+
+/* Login BUtton */
+.login{
+    padding: 10px 12px;
+    border-radius: 3px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 0;
+    outline:0;
+    background-color: rgb(93, 162, 189);
+    font-weight: 500;
+    color: white;
+    transition: all .2s;
+}
+.login:hover{
+    background-color: rgb(137, 196, 220);
+}
+
+.sign-out{
+    padding: 10px 12px;
+    border-radius: 3px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 0;
+    outline:0;
+    background-color: rgb(239, 99, 106);
+    font-weight: 500;
+    color: white;
+    transition: all .2s;
+}
+
+
+ /* search bar */
+.search{
+    display: flex;
+    align-items: center;
+    gap: 200px;
+}
+.search-bar{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    gap: 10px;
+}
+.search-bar input{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    outline: none;
+    padding: 8px 20px;
+    border: 0;
+}
+.search-btn{
+    padding: 6.8px 15px;
+    cursor: pointer;
+    background-color: skyblue;
+    color: white;
+    border: 0;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 3px;
+}
+.search-btn:hover{
+    background-color: rgb(100, 188, 222);
+}
+
+.no-results-found{
+    text-align: center;
+    color: #EF652F;
 }

@@ -58,6 +58,31 @@
 --->
 
 
- */
+// Conditional Rendering
+---> 1.We can use conditional Rendering to show or hide componets for better UI experience.
+     2. There are few ways for conditional rendering
+        a.Using "If" statement
+        b.Using Ternary operator
+        c.using logical And(&&)
+        d.using state variable
 
-// Resume from 57:43:00
+
+// WHat is granular rendering?
+--->1. If a part of a component's state or props changes, React will typically re-render only the affected part of the component, not the entire part.This is known as "granular rendering."
+    2.React re-render the whole component but it only updates the affect part of it.
+    3.However, there are cases where react need to update the entire component.
+        a.Pure Component:
+        b.using forceUpdate() Method.
+
+Rendering means that calling that function again.
+
+// When using state variable in react, how can a constant variable can update?
+--->Beacuse, every rendering cycle in react creates a new variable then it was before. 
+
+// Whenever a state variable update, react triggers a reconciliation cycle(re-renders the components)
+        
+    */
+
+
+
+// resume from 1:37:00 part 6
