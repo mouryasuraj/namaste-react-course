@@ -15,7 +15,7 @@
 
 
 // Micro Service Architecture
---> 1.This is known as Separation of concerns and single responsiblity princliple where each and every service have its own job.
+--> 1.It is known as Separation of concerns and single responsiblity princliple where each and every service have its own job.
     2.You can use any technology, framework or pragramming language in microservices to build a application.
     3.All services run on their own port numbers like port: 1234--> is for UI
     4.Microservices architecture is a modern approach to design and building software application as a collection of

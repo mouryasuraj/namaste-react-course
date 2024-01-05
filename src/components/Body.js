@@ -42,7 +42,7 @@ const Body = () => {
     //     console.log(jsonData);
     //     // setListOfRestaurant(jsonData?.data?.card) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
     // }
-
+    console.log("After useEffect");
 
     // fetchData function to who hardcode data in the UI
     const fetchData = () => {
@@ -66,11 +66,11 @@ const Body = () => {
 
 
     // If the length of restaurant is 0 then show shimmer instead of restaurant cards
-    if (listOfRestaurant.length === 0) {
-        return <Shimmer />
-    }
+    // if (listOfRestaurant.length === 0) {
+    //     return <Shimmer />
+    // }
 
-    return (
+    return listOfRestaurant.length === 0 ? <Shimmer /> : (
         <div className="body">
             {/* Search Bar */}
             <div className="search">
@@ -87,7 +87,7 @@ const Body = () => {
                 {
                     filteredRes.length === 0 
                     ? <h1>No results found.</h1> 
-                    : filteredRes.length === 0 ? <h1 className="no-results-found">No result found.</h1> : filteredRes.map((resTaurantCard) => <RestaurantCard key={resTaurantCard.info.id} resData={resTaurantCard} />)
+                    : filteredRes.map((resTaurantCard) => <RestaurantCard key={resTaurantCard.info.id} resData={resTaurantCard} />)
                 }
             </div>
         </div>
