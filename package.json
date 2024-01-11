@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is react",
   "scripts": {
-    "start":"parcel index.html",
-    "build":"parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
@@ -13,6 +13,7 @@
   "author": "Suraj Mourya",
   "license": "ISC",
   "devDependencies": {
+    "http-proxy-middleware": "^2.0.6",
     "parcel": "^2.10.2",
     "process": "^0.11.10"
   },
@@ -20,7 +21,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "browserslist":[
+  "browserslist": [
     "last 2 versions"
   ]
 }
