@@ -33,7 +33,7 @@
 // Two approaches that how the data fetch from database?
 1.load---> api ---> render
 2.load---> render whatever you have, like(skeleton of component) ---> API ---> render(This is the best approach in react)
-      ---> Beacause in the 1st approach when data loads. nothing is visible on the UI and then suddenly all the cards showed up that's why 2nd approach is better because, On the time of  loading it render something like skelton and when api succecfully called then it re render the cards
+      ---> Beacause in the 1st approach when data loads. nothing is visible on the UI and then suddenly all the cards showned up that's why 2nd approach is better because, On the time of  loading it render something like skelton and when api succecfully called then it re render the cards
       
 
 
@@ -45,7 +45,7 @@
         },[])
     3.useEffect takes two argument first is a callback function and other is array of dependencies.
     4.The callback function which we have passed to the useEffect hoook is called after the component renders.
-    5.If you want to show something after the render of the component then put inside it in useEffect function.
+    5.If you want to show something after the render of the component then put inside it in useEffect function.(Example: showing skeleton)
 
 // What is CORS policy?
 ----> 1.Our browser block us to fetchdata from one origin to different origin due to CORS policy.
@@ -53,9 +53,10 @@
 
 // What is optional chaining?
 ---> 
+Optional chaining is a feature in some programming languages that allows you to safely access properties or methods of an object without explicitly checking if each level of the property chain exists. It helps to avoid errors that might occur if you try to access properties or methods on an object that is null or undefined.
 
 // What is Shimmering UI?
---->
+--->Shimmering UI is a visual effect used in user interfaces to indicate that content is loading or that an action is in progress. It involves displaying a subtle, animated pattern of light and dark shades that "shimmer" over an area where content is expected to appear. This technique is often employed as an alternative to displaying static loading spinners or progress bars.
 
 
 // Conditional Rendering
@@ -85,4 +86,3 @@ Rendering means that calling that function again.
 
 
 
-// resume from 1:37:00 part 6

@@ -21,10 +21,10 @@
                 export default App
                 then import it like:
                     import App from 'path'
-            c.We can write any name to impor the export default.
+            c.We can write any name to import the export default.
      3. * Export(Wildcard, namespace):
             a.If you want to export all the named export then use asterisk(*).
-            b.This exports all the named export from the another module as properties of a single object.
+            b.This exports all the named export from  another module as properties of a single object.
             c.It is useful when you want to import multiple exports from a module without listing them individually.
             d.syntax: export const name = "Suraj"
                       export const surname = "Mourya"
@@ -59,7 +59,7 @@
 ---> 1. React hooks is just a normal javascript functions which comes with more superpower.
      2. It is a prebuilt function created by Facebook developer.
      3. React hooks are a feature introduced in react 16.8 version that allows functional component to use state and lifecycle features, which were previously available in class components.
-     4.Hooks previde more concise and readable way to manage stateful logic, side effects, and other react feature in functional components.
+     4.Hooks provide more concise and readable way to manage stateful logic, side effects, and other react feature in functional components.
 
 4.Why do we need a useState hooks?
 ---> 1.It is used to add state to functional component.

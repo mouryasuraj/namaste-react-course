@@ -61,7 +61,7 @@
                 a.Tree shaking tool analyze the module dependency tree and remove any code which is not in used by the application.
                 b.This includes function, classes, variables that are imported but never used.
         4.Minimization of bundle size:
-                a.The primaty code of tree shaking is to reduce the size of final bundled JavaScript code. By eliminating the dead code, the resulting bundle sent to the browser is smaller, leading to faster load times for web applications.
+                a.The primary code of tree shaking is to reduce the size of final bundled JavaScript code. By eliminating the dead code, the resulting bundle sent to the browser is smaller, leading to faster load times for web applications.
 
 7.What is Hot Module Replacement(HMR)?
 ---->1. HMR stands for Hot Module Replacement

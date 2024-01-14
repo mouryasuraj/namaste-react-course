@@ -21,7 +21,7 @@
     7. But if you have named export then use curly braces to import   ex: import {LOGOURL, CDNURL} from './constants'
 */
 
-// There is a standard practice that your file should not exceed more than 100 line. It's not a rule but a standard that most of the company following. If you use standard code then it become easy to understand by any developer.
+// There is a standard practice that your file should not exceed more than 100 line. It's not a rule but a standard that most of the company follows. If you use standard code then it become easy to understand by any developer.
 
 /* 
 // Create a feature

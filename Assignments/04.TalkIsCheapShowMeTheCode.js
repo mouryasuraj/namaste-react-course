@@ -11,7 +11,7 @@
     React ecosystem.React itself is a javascript library for building UI and it can be used with different versions of Ecmascript.
     
 3.How can i write comment in JSX?
--->1.If you want to write comment in JSX, then we have to use curly braces and the we write comment in JSX because in the curly braces we can write any valid javascript code.
+-->1.If you want to write comment in JSX, then we have to use curly braces and then we are able to write comment in JSX because in the curly braces we can write any valid javascript code.
     2. For Example: 
             const App = () =>{
                 return(
@@ -95,10 +95,14 @@ Prioritization:
 
 The button click event is a high-priority update.
 React Fiber ensures that this update is processed quickly, providing a more responsive user experience.
+
+
 Incremental Rendering:
 
 Rendering work related to the button click is broken down into smaller units (fibers).
 These units can be processed incrementally, preventing long blocking times on the main thread.
+
+
 Error Boundaries:
 React Fiber also introduces the concept of error boundaries, allowing components to catch and handle errors gracefully without crashing the entire application.
 
@@ -109,8 +113,8 @@ React Fiber is an internal implementation detail of React that enhances the rend
 8.Can we use index as a key in React?
 -->1. No. It is not recommoned by React to use index as a key. Instead you can use database id, etc.
    2. Beacause, if we use index as a key. Suppose a new child element render in the first place then index number of this element is 0 and it will shift the index to rest of the element then it may cause and crash your application or render wrong information.
-   3. If you don't use key then browser never know which is the latest element and which is previous one.
-   4.Always use unique id for key if you don't know a unique id then only you can use index as a key.
+   3. If you don't use key then browser never know which is the latest element and which is the previous one.
+   4.Always use unique id for key if you don't have a unique id then only you can use index as a key.
 
 9.What is props in React? Ways to
 ---> 1. In React, props also called as properties.
@@ -123,7 +127,7 @@ React Fiber is an internal implementation detail of React that enhances the rend
             d.Default props.
             e.Destructuring Props.
 
-10.Waht is config driven UI?
+10.What is config driven UI?
 ---> Config-driven UI, or Configuration-driven User Interface, refers to an approach in software development where the appearance and behavior of a user interface are primarily defined by configuration rather than hard-coded implementation. In other words, instead of writing code to describe how a user interface should look and behave, developers use configuration files or data to specify those details.
 
 */

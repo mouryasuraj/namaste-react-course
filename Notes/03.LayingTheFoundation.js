@@ -37,7 +37,7 @@ babel----> https://babeljs.io/
         b.Fucntional componenet-->New way to create components
 
     2.React functional components
-        a.React functional component is just like normal function in javascript but named function with first letter as a capital letter and it return some piece of JSX
+        a.React functional component is just like normal function in javascript but named the function with first letter as a capital letter and it return some piece of JSX
         b.A function which return a react element because at the end JSX is an react Element.
     3.What is component composition?
     --> Composing component into another component is called component composition.
@@ -45,8 +45,3 @@ babel----> https://babeljs.io/
     5.JSX prevent cross-site scripting attack for you.
 */
 
-
-// Progress of leacture
-// Inception - Completed
-// Igniting our app - Completed
-// Laying the foundation - completed
