@@ -36,22 +36,23 @@ const Body = () => {
     }, [])
 
     // FetchData function for an api
-    const fetchData = async () =>{
-        const fetched = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=19.0512616&lng=72.9368399"); //This api is not working.
-        const jsonData = await fetched.json();
-        console.log(jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
-        setListOfRestaurant(jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
-        setFilteredRes(jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
+    // const fetchData = async () =>{
+    //     const fetched = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=19.0512616&lng=72.9368399"); //This api is not working.
+    //     const jsonData = await fetched.json();
+    //     console.log(jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
+    //     setListOfRestaurant(jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
+    //     setFilteredRes(jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
             
-    }
-    console.log("After useEffect");
-
-    // fetchData function to who hardcode data in the UI
-    // const fetchData = () => {
-    //     setTimeout(() => {
-    //         setListOfRestaurant(resList)
-    //     }, 1000);
     // }
+
+    
+    // fetchData function to who hardcode data in the UI
+    const fetchData = () => {
+        setTimeout(() => {
+            setListOfRestaurant(resList)
+                setFilteredRes(resList)
+        }, 1000);
+    }
     
     
     // Handle Input 
