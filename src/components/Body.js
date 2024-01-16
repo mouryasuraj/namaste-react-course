@@ -1,11 +1,13 @@
 import RestaurantCard from "./RestaurantCard";
-import resList from "../Utils/mockData";
+// import resList from "../Utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { swiggyResAPI } from "../Utils/constant.js";
+import { Link } from "react-router-dom";
 
 
 const Body = () => {
-
+    console.log(useState());
     // Local State Variable--> Supowerful state variables
     const [listOfRestaurant, setListOfRestaurant] = useState([]); //we have to give initial value and whatever we give or pass value as an argument it become the default value of that variable
     // We can also write like this
@@ -36,25 +38,25 @@ const Body = () => {
     }, [])
 
     // FetchData function for an api
-    // const fetchData = async () =>{
-    //     const fetched = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=19.0512616&lng=72.9368399"); //This api is not working.
-    //     const jsonData = await fetched.json();
-    //     console.log(jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
-    //     setListOfRestaurant(jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
-    //     setFilteredRes(jsonData?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
-            
+    const fetchData = async () => {
+        const fetched = await fetch(swiggyResAPI); //This api is not working.
+        const jsonData = await fetched.json();
+        console.log(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListOfRestaurant(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
+        setFilteredRes(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
+
+    }
+
+
+    // fetchData function to who hardcode data in the UI
+    // const fetchData = () => {
+    //     setTimeout(() => {
+    //         setListOfRestaurant(resList)
+    //             setFilteredRes(resList)
+    //     }, 1000);
     // }
 
-    
-    // fetchData function to who hardcode data in the UI
-    const fetchData = () => {
-        setTimeout(() => {
-            setListOfRestaurant(resList)
-                setFilteredRes(resList)
-        }, 1000);
-    }
-    
-    
+
     // Handle Input 
     const handleInput = (e) => {
         setSearchText(e.target.value)
@@ -87,9 +89,9 @@ const Body = () => {
             {/* Restaurant Container */}
             <div className="restaurant-container">
                 {
-                    filteredRes.length === 0 
-                    ? <h1>No results found.</h1> 
-                    : filteredRes.map((resTaurantCard) => <RestaurantCard key={resTaurantCard.info.id} resData={resTaurantCard} />)
+                    filteredRes.length === 0
+                        ? <h1>No results found.</h1>
+                        : filteredRes.map((resTaurantCard) => <Link className="cardLink" key={resTaurantCard.info.id}  to={'restaurant/'+resTaurantCard.info.id}> <RestaurantCard resData={resTaurantCard} /></Link>)
                 }
             </div>
         </div>
