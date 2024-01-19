@@ -10,10 +10,10 @@ const Header = () => {
     const handleLoginBtn = ()=>{
         setLogin(!logIn)
     }
-    console.log("Header render");
+    // console.log("Header render");
 
     useEffect(()=>{
-        console.log('useEffect called');
+        // console.log('useEffect called');
     },[logIn])
 
 

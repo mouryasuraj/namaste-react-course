@@ -259,3 +259,12 @@
     text-align: center;
     color: #EF652F;
 }
+
+
+/* About us --> users cards */
+.user-card{
+    border: 1px solid gray;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 5px;
+}
