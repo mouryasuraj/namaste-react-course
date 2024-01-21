@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { swiggyResAPI } from "../Utils/constant.js";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../Utils/useOnlineStatus.js";
 
 
 const Body = () => {
@@ -39,11 +40,15 @@ const Body = () => {
 
     // FetchData function for an api
     const fetchData = async () => {
-        const fetched = await fetch(swiggyResAPI); //This api is not working.
-        const jsonData = await fetched.json();
-        console.log(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setListOfRestaurant(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
-        setFilteredRes(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
+        try {
+            const fetched = await fetch(swiggyResAPI); //This api is not working.
+            const jsonData = await fetched.json();
+            console.log(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+            setListOfRestaurant(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
+            setFilteredRes(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants) //YOu can do this if your api is working properly. We can use optional chaining mechanism to avoid error.
+        } catch (error) {
+            console.log(error);
+        }
 
     }
 
@@ -73,6 +78,11 @@ const Body = () => {
     // if (listOfRestaurant.length === 0) {
     //     return <Shimmer />
     // }
+
+
+    const onlineStatus = useOnlineStatus();
+    if(!onlineStatus) return <h1>Looks like you offline. Please check your internet or wifi.</h1>
+
 
     return listOfRestaurant.length === 0 ? <Shimmer /> : (
         <div className="body">

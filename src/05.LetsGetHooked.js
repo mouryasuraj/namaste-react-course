@@ -1,13 +1,23 @@
 
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import ReactDOM from "react-dom/client";
 import  Header  from "./components/Header";
 import Body from "./components/Body";
-import About from "./components/About";
+// import About from "./components/About";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestuaurantMenu from "./components/RestaurantMenu";
+// import Grocery from "./components/Grocery";    //If you want to use lazy loading then we cannot import components like this
+
+// Here how we can import out component
+const Grocery = lazy(()=>(
+    import("./components/Grocery")  //This import is distinct to the normal import. It is a function which is given by react
+))
+
+const About = lazy(()=>(
+    import('./components/About')
+))
 
 
 
@@ -34,11 +44,15 @@ const appRouter = createBrowserRouter([
             },
             {
                 path:'/about',
-                element:<About />
+                element:<Suspense fallback={<h1>Loadin....</h1>} ><About /></Suspense>
             },
             {
                 path:'/contact',
                 element:<Contact />
+            },
+            {
+                path:'/grocery',
+                element:<Suspense fallback={<h1>Loadin....</h1>} ><Grocery /></Suspense>
             },
             {
                 path:'/restaurant/:resId',
