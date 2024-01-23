@@ -15,7 +15,9 @@
   "devDependencies": {
     "http-proxy-middleware": "^2.0.6",
     "parcel": "^2.10.2",
-    "process": "^0.11.10"
+    "postcss": "^8.4.33",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.1"
   },
   "dependencies": {
     "react": "^18.2.0",
