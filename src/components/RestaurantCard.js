@@ -20,4 +20,18 @@ const RestaurantCard = (props) => {
     )
 }
 
+// Higher Order COmponent COde
+// Let's make a feature using higher order component
+
+export const withPromotedLabel = (RestaurantCard) => {
+    return (props) => {
+        return (
+            <div className="promoted-container">
+                <h1 className="promoted">Promoted</h1>
+                <RestaurantCard {...props} />
+            </div>
+        )
+    }
+}
+
 export default RestaurantCard;

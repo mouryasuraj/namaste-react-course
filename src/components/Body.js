@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 // import resList from "../Utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
@@ -21,6 +21,9 @@ const Body = () => {
 
     // state varaible for search bar
     const [searchText, setSearchText] = useState('')
+
+    // WithPromotedLable
+    const RestaurantCardWithPromoted = withPromotedLabel(RestaurantCard)
 
 
     // local normal variable
@@ -81,7 +84,7 @@ const Body = () => {
 
 
     const onlineStatus = useOnlineStatus();
-    if(!onlineStatus) return <h1>Looks like you offline. Please check your internet or wifi.</h1>
+    if (!onlineStatus) return <h1>Looks like you offline. Please check your internet or wifi.</h1>
 
 
     return listOfRestaurant.length === 0 ? <Shimmer /> : (
@@ -101,7 +104,13 @@ const Body = () => {
                 {
                     filteredRes.length === 0
                         ? <h1>No results found.</h1>
-                        : filteredRes.map((resTaurantCard) => <Link className="cardLink" key={resTaurantCard.info.id}  to={'restaurant/'+resTaurantCard.info.id}> <RestaurantCard resData={resTaurantCard} /></Link>)
+                        : filteredRes.map((resTaurantCard) =>
+                            <Link className="cardLink" key={resTaurantCard.info.id} to={'restaurant/' + resTaurantCard.info.id}>
+                                {
+                                    resTaurantCard.info.avgRating > 4.3 ? <RestaurantCardWithPromoted resData={resTaurantCard} /> : <RestaurantCard resData={resTaurantCard} />
+                                }
+
+                            </Link>)
                 }
             </div>
         </div>
