@@ -1,21 +1,25 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { LOGO_URL } from "../Utils/constant";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import useOnlineStatus from "../Utils/useOnlineStatus";
+import UserContext from "../Utils/UserContext";
 
 const Header = () => {
 
     const [logIn, setLogin] = useState(true)
 
+    // UserContext
+    const { loggedInUser } = useContext(UserContext)  //It gives you a data of object
+
     // Handle Login Button
-    const handleLoginBtn = ()=>{
+    const handleLoginBtn = () => {
         setLogin(!logIn)
     }
     // console.log("Header render");
 
-    useEffect(()=>{
+    useEffect(() => {
         // console.log('useEffect called');
-    },[logIn])
+    }, [logIn])
 
     const onlineStatus = useOnlineStatus();
 
@@ -36,6 +40,7 @@ const Header = () => {
                     <li><Link to='/contact'>Contact Us</Link></li>
                     <li><Link to='/grocery'>Grocery</Link></li>
                     <li>Cart</li>
+                    <li>{loggedInUser}</li>
                 </ul>
                 <button onClick={handleLoginBtn} className={`${logIn ? "login" : "sign-out"}`}>{logIn ? 'Log In' : 'Sign Out'}</button>
             </div>

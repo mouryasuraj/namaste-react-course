@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Users from './Users'
 import UserClass from './UsersClass';
+import UserContext from '../Utils/UserContext';
 
 // This is class based component
 class About extends Component{
@@ -9,6 +10,9 @@ class About extends Component{
         super(props);
         console.log("Parent constructor");
     }
+
+    
+    
     
     componentDidMount(){
         console.log("Parent Did Mount");
@@ -19,6 +23,11 @@ class About extends Component{
         return (
             <div>
                 <h1>About Us Page</h1>
+                <UserContext.Consumer>
+                {
+                    ({loggedInUser})=> <h1>{loggedInUser}</h1>
+                }
+                </UserContext.Consumer>
                 <h2>Teams</h2>
                 {/* 1.<Users name='Suraj Mourya (Fucntion)' location='Mumbai(Function)' /> */}
                 <Users name='first' location='Mumbai(class)' />

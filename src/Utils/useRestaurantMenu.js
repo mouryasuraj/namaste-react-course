@@ -7,11 +7,10 @@ const useRestaurantMenu = (resId) =>{
 
     useEffect(()=>{
         fetchData()
-    });
+    },[]);
 
     const fetchData = async () =>{
         try {
-            
             const data = await fetch(swiggyResMenuAPI + resId);
             const json = await data.json();
             setResMenuInfo(json)

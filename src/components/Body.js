@@ -1,10 +1,11 @@
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 // import resList from "../Utils/mockData";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { swiggyResAPI } from "../Utils/constant.js";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus.js";
+import UserContext from "../Utils/UserContext.js";
 
 
 const Body = () => {
@@ -82,6 +83,8 @@ const Body = () => {
     //     return <Shimmer />
     // }
 
+    const {loggedInUser, setUserName}  = useContext(UserContext)
+
 
     const onlineStatus = useOnlineStatus();
     if (!onlineStatus) return <h1>Looks like you offline. Please check your internet or wifi.</h1>
@@ -96,6 +99,10 @@ const Body = () => {
                     <input type="text" placeholder="Search fro restaurant...." value={searchText} onChange={handleInput} />
                     <button className="search-btn">Search</button>
                 </form>
+                <div>
+                    <label htmlFor="input">UserName : </label>
+                    <input id="input" type="text" value={loggedInUser} onChange={(e)=> setUserName(e.target.value)} />
+                </div>
             </div>
             {/* Restuarant Title */}
             <h1 className="res-title">Restaurants</h1>
