@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
             {
                 categories.map((cat, index) => (
 
-                    <RestaurantCategory key={index} data={cat?.card?.card} showItems={index === showIndex ? true : false} setShowIndex={() => setShowIndex(showIndex === index ? null : index)} />  //All restaurantCateory maintaining their own state
+                    <RestaurantCategory key={index} data={cat?.card?.card} showItems={index === showIndex ? true : false} />  //All restaurantCateory maintaining their own state
                 ))
             }
         </div>
