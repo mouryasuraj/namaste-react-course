@@ -40,7 +40,7 @@
     a.Context Provider:
 
     The Context.Provider component is used to wrap a part of the component tree where you want to make a certain value (such as state or a function) available to child components.
-    It takes a value prop that represents the value you want to share.
+    It takes a "value={}" prop that represents the value you want to share.
     The value provided by the Context.Provider will be accessible to any descendant components that are Context Consumers.
 
     b.Context Consumer:

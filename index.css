@@ -426,3 +426,33 @@
 #input{
     padding: 5px;
 }
+
+/* Cart conatainer */
+.cart-container{
+    width: 60%;
+    margin: auto;
+    padding: 30px 0;
+}
+.cart-container .cart-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart-container h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: rgb(70, 70, 70);
+}
+.cart-container button{
+    background: rgb(59, 59, 59);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.cart-container .empty-cart-msg{
+    font-size: 20px;
+    color: rgb(69, 69, 69);
+}

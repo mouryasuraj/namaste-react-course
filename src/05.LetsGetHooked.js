@@ -8,8 +8,13 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestuaurantMenu from "./components/RestaurantMenu";
+import Cart from "./components/Cart";
 import UserContext from "./Utils/UserContext";
 // import Grocery from "./components/Grocery";    //If you want to use lazy loading then we cannot import components like this
+
+// Provider to connect Redux
+import { Provider } from "react-redux";
+import appStore from "./Utils/appStore";
 
 // Here how we can import out component
 const Grocery = lazy(() => (
@@ -36,17 +41,20 @@ const AppLayout = () => {
     }, [])
 
     return (
-        // here the username will be "Default User"
-        <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>  {/*Note: We can provide Provider to an specific component also */}
-            {/* Here the userName will be "Suraj Mourya" */}
-            <div className="app">
-                {/* <UserContext.Provider value={{ loggedInUser: "Vipin" }}> */}
+        // This is the provider for redux
+        <Provider store={appStore}>
+            {/*here the username will be "Default User"*/}
+            <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>  {/*Note: We can provide Provider to an specific component also */}
+                {/* Here the userName will be "Suraj Mourya" */}
+                <div className="app">
+                    {/* <UserContext.Provider value={{ loggedInUser: "Vipin" }}> */}
                     {/* Here the userName will be Vipin" */}
                     <Header />
-                {/* </UserContext.Provider> */}
-                <Outlet />
-            </div>
-        </UserContext.Provider>
+                    {/* </UserContext.Provider> */}
+                    <Outlet />
+                </div>
+            </UserContext.Provider>
+        </Provider>
     )
 }
 
@@ -70,6 +78,10 @@ const appRouter = createBrowserRouter([
             {
                 path: '/grocery',
                 element: <Suspense fallback={<h1>Loadin....</h1>} ><Grocery /></Suspense>
+            },
+            {
+                path:'/cart',
+                element:<Cart />
             },
             {
                 path: '/restaurant/:resId',

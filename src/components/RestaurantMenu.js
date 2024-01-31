@@ -9,7 +9,7 @@ const RestaurantMenu = () => {
 
     const { resId } = useParams();
     // State for resmenu index
-    const [showIndex, setShowIndex] = useState(null)
+    const [showIndex, setShowIndex] = useState(0)
 
     const resMenuInfo = useRestaurantMenu(resId);
 
@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
             {
                 categories.map((cat, index) => (
 
-                    <RestaurantCategory key={index} data={cat?.card?.card} showItems={index === showIndex ? true : false} />  //All restaurantCateory maintaining their own state
+                    <RestaurantCategory key={index} data={cat?.card?.card} showItems={index === showIndex ? true : false} setShowIndex={()=> setShowIndex(showIndex === index ? false : index)}  />  //All restaurantCateory maintaining their own state
                 ))
             }
         </div>

@@ -3,6 +3,7 @@ import { LOGO_URL } from "../Utils/constant";
 import { Link } from 'react-router-dom'
 import useOnlineStatus from "../Utils/useOnlineStatus";
 import UserContext from "../Utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
 
@@ -10,6 +11,10 @@ const Header = () => {
 
     // UserContext
     const { loggedInUser } = useContext(UserContext)  //It gives you a data of object
+
+    // Subcribing to the store of item using selector 
+    const cartItems = useSelector((store) => store.cart.items);
+    console.log(cartItems);
 
     // Handle Login Button
     const handleLoginBtn = () => {
@@ -39,7 +44,7 @@ const Header = () => {
                     <li><Link to='/about'>About</Link></li>
                     <li><Link to='/contact'>Contact Us</Link></li>
                     <li><Link to='/grocery'>Grocery</Link></li>
-                    <li>Cart</li>
+                    <li><Link to='/cart'>{`Cart(${cartItems.length} items)`}</Link></li>
                     <li>{loggedInUser}</li>
                 </ul>
                 <button onClick={handleLoginBtn} className={`${logIn ? "login" : "sign-out"}`}>{logIn ? 'Log In' : 'Sign Out'}</button>

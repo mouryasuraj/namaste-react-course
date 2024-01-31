@@ -23,7 +23,7 @@
 5.So, how to create context
    1.First, make a separate file for context in Utils folder 
    2.createContext is a utils function given by react to create context
-   3.To use the context anywhere in our program, we have hook called "useContext" for functional based component
+   3.To use the context anywhere in your program, we have hook called "useContext" for functional based component
       createContext({
          loggedInUser:"Default user"
       })
@@ -40,4 +40,4 @@
 // Features in this episode
 // 1.Promoted Feature in swiggy web app
 // 2.Accordion feature to show item list
-// 3.Accordion feature to show only one accordion item at a time using Liftign state up concept in react
+// 3.Accordion feature to show only one accordion item at a time using "Lifting state up" concept in react
