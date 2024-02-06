@@ -18,7 +18,7 @@ const ItemsList = ({ data }) => {
             {data.map((card) => {
                 const { name, price, defaultPrice, description, imageId, isVeg } = card?.card?.info
                 return (
-                    <div className="res-dish-list">
+                    <div data-testid='items' className="res-dish-list">
                         <div className="left">
                             <div className="dish-details">
                                 {isVeg === 1 ? <VegIcon /> : <NonVegIcon />}

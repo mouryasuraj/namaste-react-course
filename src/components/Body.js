@@ -32,7 +32,7 @@ const Body = () => {
 
     // Top rated
     const handleTopRated = () => {
-        const filteredRes = listOfRestaurant.filter(res => res.info.avgRating > 4.3)
+        const filteredRes = listOfRestaurant.filter(res => res.info.avgRating > 4.4)
         setFilteredRes(filteredRes)
     }
 
@@ -83,7 +83,7 @@ const Body = () => {
     //     return <Shimmer />
     // }
 
-    const {loggedInUser, setUserName}  = useContext(UserContext)
+    const { loggedInUser, setUserName } = useContext(UserContext)
 
 
     const onlineStatus = useOnlineStatus();
@@ -96,12 +96,12 @@ const Body = () => {
             <div className="search">
                 <button className="top-rating-res" onClick={handleTopRated}>Top Rated Restaurant</button>
                 <form onSubmit={handleSearchBtn} className="search-bar">
-                    <input type="text" placeholder="Search fro restaurant...." value={searchText} onChange={handleInput} />
+                    <input data-testid='search-input' type="text" placeholder="Search fro restaurant...." value={searchText} onChange={handleInput} />
                     <button className="search-btn">Search</button>
                 </form>
                 <div>
                     <label htmlFor="input">UserName : </label>
-                    <input id="input" type="text" value={loggedInUser} onChange={(e)=> setUserName(e.target.value)} />
+                    <input id="input" type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
                 </div>
             </div>
             {/* Restuarant Title */}

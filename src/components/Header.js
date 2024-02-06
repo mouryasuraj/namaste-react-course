@@ -14,7 +14,7 @@ const Header = () => {
 
     // Subcribing to the store of item using selector 
     const cartItems = useSelector((store) => store.cart.items);
-    console.log(cartItems);
+    // console.log(cartItems);
 
     // Handle Login Button
     const handleLoginBtn = () => {

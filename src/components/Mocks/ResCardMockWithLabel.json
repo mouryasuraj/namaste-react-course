@@ -1,0 +1,91 @@
+{
+    "info": {
+        "id": "646672",
+        "name": "Bakingo-Cakes & Desserts",
+        "cloudinaryImageId": "05994df0e49725bd230146c320b8f7aa",
+        "locality": "Chembur",
+        "areaName": "Anwar Compound",
+        "costForTwo": "₹300 for two",
+        "cuisines": [
+            "Bakery",
+            "Desserts",
+            "Beverages",
+            "Snacks"
+        ],
+        "avgRating": 4.5,
+        "parentId": "3818",
+        "avgRatingString": "4.5",
+        "totalRatingsString": "500+",
+        "sla": {
+            "deliveryTime": 27,
+            "lastMileTravel": 3.9,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25-30 mins",
+            "lastMileTravelString": "3.9 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-02-07 00:00:00",
+            "opened": true
+        },
+        "badges": {
+            "textExtendedBadges": [
+                {
+                    "iconId": "v1705582451/Ratnesh_Badges/Listing_HR.png",
+                    "shortDescription": "Perfect Cake Delivery",
+                    "fontColor": "#7E808C"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "",
+                                "fontColor": "#7E808C",
+                                "iconId": "v1705582451/Ratnesh_Badges/Listing_HR.png",
+                                "shortDescription": "Perfect Cake Delivery"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "60% OFF",
+            "subHeader": "UPTO ₹120"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {
+        "context": "seo-data-b53ab0d8-a9cc-41a7-a964-5e75cc863bbd"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/bakingo-cakes-and-desserts-chembur-anwar-compound-mumbai-646672",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

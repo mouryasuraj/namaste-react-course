@@ -41,7 +41,7 @@
             presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
         };
     e.Then configure parcelrc file to disable default babel transpilation
-    f.Jest configuration --- npm jest --init
+    f.Jest configuration --- npx jest --init
         It will ask you some question like
             1.Are you using typescript or not
             2.Where you want to test the application(node or jsDOM(browser like))
@@ -65,4 +65,39 @@ __ two underscore also known as dunder
 
 
 1.First we have to create a file for test case like sum.test.js, I have created in the component folder
+
+// React Unit testing
+1.Whenver we test component first we have to render that component
+2.We can use render method which is come from @testing-library/react 
+3.We have to use screen which is given by react testing library for reading the document in the component
+4.To make jsx work in testing code, we have to install @babel/preset-react
+5.And then we have to include @babel/preset-react to our babel.config.js
+        module.exports = {
+            presets: [
+                ['@babel/preset-env', {targets: {node: 'current'}}],
+                ['@babel/preset-react, {runtime:'automatic'}]
+            ],
+        };
+6.Here, in the above code, preset-react means that it help us to write jsx in the test cases beacuse it will convert jsx into normal html code.
+7.After this we also get another error of toBeInTheDocument is not a function, to work this code, we have to install another library @testing-library/jest-dom
+
+8.If you want to test according to the group then you can wrap those test cases inside the describe method
+--> describe("should", ()=>{
+    //test cases
+})
+9.and we can create nested describe also
+10. we can write "it" in the place of "test" both are same
+11.If you are doing unit testing then make sure that in that component if any redux code is written , if it is written then wrapped with <Provider></Provider /> at the time of testing that component like:   
+        test("SHoul", ()=>{
+            <Provider store={appStore}><Header /></Provider>
+        }
+12.If there is any code or component which is coming from react-router-dom then we have to wrap our component in the BrowserRouter
+13.If you want to test the code for onclick event then we have to use fireEvent
+
+// React integration Testing
+1.Whenever we are doing render where states are updated on the event click then we have to wrap our render method into the act method act(()=>{
+    //component
+})
+2.This act function come from react-dom/test-utils
+3.There are some helper functions in testing afterAll, beforeAll, afterEach, beforeEach
 */
