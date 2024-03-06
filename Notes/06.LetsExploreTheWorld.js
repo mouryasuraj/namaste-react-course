@@ -2,8 +2,7 @@
 
 
 // Monolith Architecture
---> 1.Monolith Architecture,is also known as Monolithic Architecture, is a traditional software architectural style where an
-    entire application is designed as a single unified codebase.
+--> 1.Monolith Architecture,is also known as Monolithic Architecture, is a traditional software architectural style where an entire application is designed as a single unified codebase.
     2.In a monolith, components such as UI, buisness logic and data access are tightly integrated in a single codebase.
     3.key characteristic:
         a.Single Codebase: The entire application developed, deployed and maintain as a single codebase.
@@ -15,7 +14,7 @@
 
 
 // Micro Service Architecture
---> 1.It is known as Separation of concerns and single responsiblity princliple where each and every service have its own job.
+--> 1.It is known as Separation of concerns and single responsiblity principle where each and every service have its own job.
     2.You can use any technology, framework or pragramming language in microservices to build a application.
     3.All services run on their own port numbers like port: 1234--> is for UI
     4.Microservices architecture is a modern approach to design and building software application as a collection of
@@ -33,7 +32,7 @@
 // Two approaches that how the data fetch from database?
 1.load---> api ---> render
 2.load---> render whatever you have, like(skeleton of component) ---> API ---> render(This is the best approach in react)
-      ---> Beacause in the 1st approach when data loads. nothing is visible on the UI and then suddenly all the cards showned up that's why 2nd approach is better because, On the time of  loading it render something like skelton and when api succecfully called then it re render the cards
+      ---> Beacause in the 1st approach when data loads. nothing is visible on the UI and then suddenly all the cards showned up that's why 2nd approach is better because, At the time of  loading it render something like skeleton and when api succecfully called then it re render the cards
       
 
 

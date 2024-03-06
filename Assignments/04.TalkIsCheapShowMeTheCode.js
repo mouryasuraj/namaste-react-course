@@ -8,7 +8,7 @@
 
 2.Is ES6 mandatory for React?
 --> 1.ES6 stands for Ecmascript 2015, is not strictly mandatory for React, but it is highly recommonded and widely used in the
-    React ecosystem.React itself is a javascript library for building UI and it can be used with different versions of Ecmascript.
+    React ecosystem. React itself is a javascript library for building UI and it can be used with different versions of Ecmascript.
     
 3.How can i write comment in JSX?
 -->1.If you want to write comment in JSX, then we have to use curly braces and then we are able to write comment in JSX because in the curly braces we can write any valid javascript code.
@@ -119,7 +119,7 @@ React Fiber is an internal implementation detail of React that enhances the rend
 9.What is props in React? Ways to
 ---> 1. In React, props also called as properties.
      2. It is a mechanism to pass data from parent component to child component.
-     3.Props allow you to make react component dynamic and reusable by passing values as  attributes from one component to another.
+     3.Props allow you to make react component dynamic and reusable by passing values as attributes from one component to another.
      4.Ways to pass props in React:
             a.Directly pass to the component during rendering.
             b.Passing dynamic value like variable and expressions.

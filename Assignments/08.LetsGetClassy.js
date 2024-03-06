@@ -22,8 +22,8 @@
                     element:'<About />',
                 }
             ])
-    6.If we want to create nedted router then we need to put children key in the object where we want to create children.
-    7.Children also take array of objects which have path, element, childrem ,errorElement, etc keys.
+    6.If we want to create nested router then we need to put children key in the object where we want to create children.
+    7.Children also take array of objects which have path, element, children ,errorElement, etc keys.
        -->  const appRouter = createBrowserRouter([
                 {
                     path:'/',
@@ -82,7 +82,7 @@
                 1.HTML DOM update with new Data
                 2.Then after dom updated, componentDidUpdate will be call
                 3.ComponentDidUpdate is used to update every time if props or state changes.
-    3.Unmounting: It will call the methode just before component unmounting.
+    3.Unmounting: It will call the method just before component is unmounting.
 
 4.Why do we use componentDidMount()?
 --> 
@@ -106,7 +106,7 @@
                         console.log('Interval')
                     },1000)
                 }
-            2.And, I visited to other component like about, it will to that componet, but still our setInterval is executing after i leave that component and when again visited to that componet then it create another setinterval.
+            2.And, I visited to other component like About Component, it will go to that componet, but still our setInterval is executing after i leave that component and when again visited to that componet then it create another setinterval.
             3.So, basically if i again and again render that componet it will create setInterval, that the problem, it can may be crash our application at some time.
             4.To avoid this issue, we use componentWillMount()
                 componentDIdMount(){

@@ -1,5 +1,5 @@
 import React from "react";
-import  ReactDOM  from "react-dom/client";
+import ReactDOM from "react-dom/client";
 const rootDOM = ReactDOM.createRoot(document.getElementById('root'));
 
 // HOw to create element
@@ -24,7 +24,7 @@ Ex: <div id='parent'>
 //     React.createElement('div', { id: 'child' },
 //         React.createElement('h1', {}, "hi, I'm h1 tag"))
 // )
-// console.log(parent);//It will print Object which is react element not html element and while rendering render() method convert react element into html element
+// console.log(parent);//It will print Object which is react element not html element and while rendering, render() method convert react element into html element
 // rootDOM.render(parent)
 
 // If you want to create siblings use []
@@ -41,19 +41,19 @@ Ex:     <div id='parent'>
         </div>
 */
 
-const parent = React.createElement('div',{ id: 'parent' },
+const parent = React.createElement('div', { id: 'parent' },
     [
         React.createElement('div', { id: 'child1' },
-        [
-            React.createElement('h1', {}, "hi, I'm h1 tag 😌"),
-            React.createElement('h2', {}, "hi, I'm h2 tag"),
-        ]),
+            [
+                React.createElement('h1', {}, "hi, I'm h1 tag 😌"),
+                React.createElement('h2', {}, "hi, I'm h2 tag"),
+            ]),
         React.createElement('div', { id: 'child2' },
-        [
-            React.createElement('h1', {}, "hi, I'm h1 tag"),
-            React.createElement('h2', {}, "hi, I'm h2 tag"),
-        ])
-        
+            [
+                React.createElement('h1', {}, "hi, I'm h1 tag"),
+                React.createElement('h2', {}, "hi, I'm h2 tag"),
+            ])
+
     ]
 )
 // Above code look difficult to understand if we have lots of elements. Here JSX Comes into picture where we can write html like element in the javascript just like we write html tags

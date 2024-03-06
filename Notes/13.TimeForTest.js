@@ -18,7 +18,7 @@
             2.If you want to test a specific unit or component then we can perform unit testing.
             3.Unit testing is a software testing method in which individual units or components of a software application are tested in isolation from the rest of the application. The purpose of unit testing is to validate that each unit of the software performs as designed and meets its specification. A "unit" in this context refers to the smallest testable part of an application, typically a function, method, or procedure.
         b.Integration testing
-            1.When more that one component are connected to each other or depend on each other then we have to do integartion testing for this case.
+            1.When more than one component are connected to each other or depend on each other then we have to do integartion testing for this case.
             2.Integration testing is a level of software testing where individual units or components of a system are combined and tested as a group to ensure that they work together seamlessly. The purpose of integration testing is to detect any issues related to the interfaces and interactions between integrated components, as well as to verify that the integrated system functions as expected.
         c.end-to-end testing - e2e testing
             1.It need some tooks like selenium to perform end to end testing
@@ -36,7 +36,7 @@
     a.react testing library : npm i -D @testing-library/react
     b.jest : npm i -D jest
     c.If you're using bable then we have to install required dependencies or if you're using other tool to build project then install according to that tool : npm install --save-dev babel-jest @babel/core @babel/preset-env
-    d.configure babel: create babel.configue.js filez in the root directory and put the below code to the file:
+    d.configure babel: create babel.config.js filez in the root directory and put the below code to the file:
         module.exports = {
             presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
         };
@@ -54,7 +54,7 @@
         npm install -d jest-environment-jsdom, The above both command are same, both are installing as a dev dependecies
 
 
-//For writing test cases we have to create folder name as "__test__" anywhere is out folder structure because if we run "npm run test" it will look for this folder for code to test.
+//For writing test cases we have to create folder name as "__test__" anywhere is our folder structure because if we run "npm run test" it will look for this folder for code to test.
 or 
 you can give file name like
 Header.test.js

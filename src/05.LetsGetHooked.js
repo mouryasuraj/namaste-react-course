@@ -16,9 +16,9 @@ import UserContext from "./Utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./Utils/appStore";
 
-// Here how we can import out component
+// Here how we can import our component using lazy loading
 const Grocery = lazy(() => (
-    import("./components/Grocery")  //This import is distinct to the normal import. It is a function which is given by react
+    import("./components/Grocery")  //This import is distinct with normal import. It is a function which is given by react
 ))
 
 const About = lazy(() => (

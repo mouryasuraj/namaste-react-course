@@ -29,7 +29,7 @@
     c.This store container a big reducer and this reducer contain the reducers of slice
         eg: 
             const appStore = configureStore({
-                reducer:{
+                reducers:{
 
                 }
             })
@@ -80,7 +80,7 @@
                 clearCart
             },
             reducer:{
-                
+                items:[]
             }
         }
     j.Then we have to export two things from this slice:

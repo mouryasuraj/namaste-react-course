@@ -14,10 +14,10 @@
     2.There are two types of import
         a.default import ex: import App from './App'
         b.named import  ex: import {logoURL, CDNURL} from './constant'
-    3.Named export is used when you have to export multiple things from  file
+    3.Named export is used when you have to export multiple things from a file
     4.default export is used when you have to export only one things from file
     5. In one file, I can only have one default export and have multiple named export
-    6. If you have default export then use directly to import it   ex: import RestaurantCard from './component/Restaurant'
+    6. If you have default export then use directly to import it  ex: import RestaurantCard from './component/Restaurant'
     7. But if you have named export then use curly braces to import   ex: import {LOGOURL, CDNURL} from './constants'
 */
 
@@ -56,13 +56,11 @@
  * ---> Virtual DOM:
  *          1.Virtual DOM is not an actual DOM.
  *          2.Virtual DOM is an representation of actual DOM.
- *          3.Virtual DOM is nothing but a JavaScript Object. If we console.log(<Body /> compenent, it will show object and that
- *            is exactly how virtual DOM Looks)
+ *          3.Virtual DOM is nothing but a JavaScript Object. If we console.log(<Body /> component, it will show object and that is exactly how virtual DOM Looks)
  * 
  * ---> Diff Algorithm:
  *          1.Diff algorithm finds the difference between previous virtual DOM and new virtual DOM.
- *          2.It checks the difference between old and new virtual DOM and then it will update the actual DOM in every render
- *            cycle.
+ *          2.It checks the difference between old and new virtual DOM and then it will update the actual DOM in every render cycle.
  */
 
 

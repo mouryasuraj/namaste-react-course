@@ -20,7 +20,7 @@
 4.Here,if you extends React.Component then react will know that this is a class based component.
 5.render() method is used to return some piece of jsx.
 6.Fucntion component is normal js fucntion which return some piece of jsx and class based component is just a normal class which has render() method which return some piece of jsx.
-7.UserClass extends React.Component, here component is a class which is present in React package. So, userClass is extending Component class, it means that we can use method available in Component class.
+7.UserClass extends React.Component, here Component is a class which is present in React package. So, userClass is extending Component class, it means that we can use method available in Component class.
 8.When a new instance of class is created, initially constructor is called and fetch props from the component where its instance is created.
 9.super(props) is used to call the parent's component class before your code is execute. This is because contructor may have some initial logic to execute, to run these codes we have to call super(props) method and passing props as a object.
 
@@ -52,7 +52,7 @@
 // Lifecycle of class based component:
 
 // How code is mounted on the web page
-1.Lets example of About.js component
+1.Lets take an example of About.js component
 2.In this component, a class based component is there and react will run the code line by line and when Class component line comes, it creates the instance of that class and the first things is called in class component is constructor then it will call the render() method.
 
 // componetDidMount() - method in class component
@@ -115,7 +115,7 @@ Commit Phase:
 
 // ------Updating---------
     After comononentDidMount() data set to api data
-    again reconciliatino process will start
+    again reconciliatiin process will start
     1.render(api data)
     2.html update with api data
     3.Then, at the end componentDidUpdate() call
@@ -135,7 +135,7 @@ Note: 1.Never ever compare useEffect with componentDidMount(). They have some si
             useEffect(()=>{
 
             },[count, count1])
-        4.IN useEfffect, we can pass array of dependency, and it will only call if any of props or state has changes. In class based componet we have write and check each state and props but in useEffect we can directly pass props or states, react will handle all these behind the scenes
+        4.IN useEfffect, we can pass array of dependency, and it will only call if any of props or state has changes. In class based componet we have to write and check each state and props but in useEffect we can directly pass props or states, react will handle all these behind the scenes
 
 
 // componentWillUnmount()

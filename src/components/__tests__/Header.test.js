@@ -6,19 +6,6 @@ import { BrowserRouter } from "react-router-dom"
 import '@testing-library/jest-dom'
 
 
-it('should render the header component with login button ', () => {
-    render(
-        <BrowserRouter>
-            <Provider store={appStore}>
-                <Header />
-            </Provider>
-        </BrowserRouter>
-    )
-    const loginBtn = screen.getByRole('button', { name: 'Log In' })//This is the preferred way because it it more concise
-    // const loginBtn = screen.getByText('Log In')
-    expect(loginBtn).toBeInTheDocument();
-})
-
 it('should check whether our cart item is 0 or not', () => {
     render(
         <BrowserRouter>

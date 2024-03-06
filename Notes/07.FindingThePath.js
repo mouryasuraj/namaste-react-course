@@ -35,7 +35,7 @@
 4.Use Link component instead of anchor tag which is given by react-router-dom. If you use Link component then the whole page will not refresh instead only component will refresh that's why we called React applications are "Single Page Application" SPA
 
 // There two types of routing in web Application
-1.Client Side Routing  --> In react client side routing is happening. It doesn't make any network call. At the first time it will call all the required network ond browser have that all the code. So whenever we navigate to any other url using Link component then it quickly renders the component. 
+1.Client Side Routing  --> In react, client side routing is happening. It doesn't make any network call. At the first time it will call all the required network and browser have that all the code. So whenever we navigate to any other url using Link component then it quickly renders the component. 
 2.Server Side Routing  --> Suppose, we have a home.html, about.html, contact.html and when i click on any of the links it will call the request of that url and send the response back that is called server side routing.
 
 

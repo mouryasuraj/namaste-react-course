@@ -43,7 +43,7 @@
                 i)A config file often contain configuration setting for an application.
                 ii)These setting may include parameters like API keys, database connection strings, features toggles, environment variable and other configuration options.
         b.Separation Concern:
-                i)Using  a separate configuration file helps in separating concerns from the main codebase.
+                i)Using a separate configuration file helps in separating concerns from the main codebase.
                 ii)This separation makes it easier to manage and update the configuration setting without modifying the applicaitions core's logic.
         c.Environment Variable:
                 i)In some case, a config.js file may be based on environment variable or provide a convenient way to manage environment specific configuration.
@@ -67,7 +67,7 @@
      3.The useState hook addresses this limitation and provides a way for functional component to have a local state.
      4.Reasons why hooks are essential:
         a.Stateful login in functional component:
-            i.Functional component with hooks can now manage theri own state.
+            i.Functional component with hooks can now manage their own state.
             ii.This is crucial for building dyanmic and interactive UI.
             iii.State allows component to store and update data that affects their rendering.
         b.Avoid class component

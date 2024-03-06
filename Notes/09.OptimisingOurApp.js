@@ -46,7 +46,7 @@ Note:
 // Code splitting
 // Dynamic bundling
 // Dynamic import
-// Lazy loading(on demand loading) -- Beacuse it will not execute the code unitl we go to that component adn when we clicked on it then only it will load with separate js file.
+// Lazy loading(on demand loading) -- Beacuse it will not execute the code unitl we go to that component and when we clicked on it then only it will load with separate js file.
     How to use lazyloading
     so, lazy() is a function which is given by react with the help of this we can perform on demand loading.
     If you want separate js file for a particular components then we can use lazy function to do that.
