@@ -15,6 +15,7 @@ import UserContext from "./Utils/UserContext";
 // Provider to connect Redux
 import { Provider } from "react-redux";
 import appStore from "./Utils/appStore";
+import HookDemo from "./components/HookDemo";
 
 // Here how we can import our component using lazy loading
 const Grocery = lazy(() => (
@@ -80,8 +81,12 @@ const appRouter = createBrowserRouter([
                 element: <Suspense fallback={<h1>Loadin....</h1>} ><Grocery /></Suspense>
             },
             {
-                path:'/cart',
-                element:<Cart />
+                path: '/cart',
+                element: <Cart />
+            },
+            {
+                path: '/demo',
+                element: <HookDemo />
             },
             {
                 path: '/restaurant/:resId',

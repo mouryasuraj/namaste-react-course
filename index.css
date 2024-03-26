@@ -456,3 +456,14 @@
     font-size: 20px;
     color: rgb(69, 69, 69);
 }
+
+
+/* Demo */
+.demoInput{
+    width: 400px;
+    height: 400px;
+}
+
+.prime{
+    color: red;
+}
